@@ -1,5 +1,4 @@
 {
-  "files": [],
   "references": [
     {
       "path": "./tsconfig.vite-config.json"
@@ -9,6 +8,9 @@
     },
     {
       "path": "./tsconfig.vitest.json"
+    },
+    {
+      "path": "./tsconfig.hh.json"
     }
   ]
 }

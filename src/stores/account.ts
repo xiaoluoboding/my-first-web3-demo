@@ -13,7 +13,7 @@ export const useAccountStore = defineStore({
 
   getters: {
     shortAccount: (state) => {
-      return `${state.account.substring(0, 4)}...${state.account.substring(
+      return `${state.account.substring(0, 5)}...${state.account.substring(
         state.account.length - 4
       )}`
     }
