@@ -1,7 +1,7 @@
 {
-  "name": "vue3-starter",
-  "version": "0.0.0",
-  "description": "🖖 A Better Vue 3 Starter Template，generate by create-vue.",
+  "name": "web3-vue3-demo",
+  "version": "0.1.0",
+  "description": "🔐 Web3 + Vue3 Demo",
   "scripts": {
     "hh:run": "hardhat run script/run.ts",
     "hh:dev": "hardhat run scripts/run.ts --network localhost",
