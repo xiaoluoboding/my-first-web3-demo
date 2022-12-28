@@ -41,7 +41,7 @@ import { ethers } from 'ethers'
 
 import { useAccountStore } from '@/stores/account'
 import Counter from '../../artifacts/contracts/Counter.sol/Counter.json'
-const contractAddress = '0x5fbdb2315678afecb367f032d93f642f64180aa3'
+const contractAddress = '0x5FbDB2315678afecb367f032d93F642f64180aa3'
 const counterAbi = Counter.abi
 
 const accountStore = useAccountStore()
@@ -51,7 +51,7 @@ const isLoading = ref(false)
 
 const checkIfWalletConnected = async () => {
   try {
-    const { ethereum } = window as any
+    const { ethereum } = window
 
     if (ethereum) {
       console.log('metamask is available')
@@ -63,9 +63,16 @@ const checkIfWalletConnected = async () => {
 
     if (accounts.length > 0) {
       account.value = accounts[0]
+
+      // const provider = new ethers.providers.Web3Provider(ethereum)
+      // const ensName = (await provider.lookupAddress(account.value)) + ''
+      // console.log(ensName)
+
       accountStore.setAccountState({
-        account: accounts[0]
+        account: accounts[0],
+        ensName: ''
       })
+
       console.log(`found account with address ${account.value}`)
     } else {
       console.log('no account found')
@@ -78,7 +85,7 @@ const checkIfWalletConnected = async () => {
 
 const handleConnectWallet = async () => {
   try {
-    const { ethereum } = window as any
+    const { ethereum } = window
 
     if (!ethereum) {
       throw new Error('no ethereum found')
@@ -98,7 +105,7 @@ const handleConnectWallet = async () => {
 
 const getContract = () => {
   try {
-    const { ethereum } = window as any
+    const { ethereum } = window
 
     if (ethereum) {
       const provider = new ethers.providers.Web3Provider(ethereum)

@@ -2,13 +2,15 @@ import { defineStore } from 'pinia'
 
 type AccountState = {
   account: string
+  ensName: string
 }
 
 export const useAccountStore = defineStore({
   id: 'account',
 
   state: (): AccountState => ({
-    account: ''
+    account: '',
+    ensName: ''
   }),
 
   getters: {

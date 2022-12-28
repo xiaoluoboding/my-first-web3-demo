@@ -2,7 +2,7 @@
   <header>
     <div class="wrapper flex items-center justify-between">
       <div class="account text-2xl flex flex-1">
-        <span v-if="account">{{ `Logged as: ${account}` }}</span>
+        <span v-if="account">{{ `Logged as: ${ensName || account}` }}</span>
       </div>
       <div class="space-x-4 flex justify-center" lg="justify-end">
         <button
@@ -57,6 +57,7 @@ const toggleLocales = () => {
 const accountStore = useAccountStore()
 
 const account = computed(() => accountStore.shortAccount)
+const ensName = computed(() => accountStore.ensName)
 </script>
 
 <style>
