@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@iconify/json': ^2.1.22
   '@intlify/vite-plugin-vue-i18n': ^3.3.1
+  '@nomicfoundation/hardhat-network-helpers': ^1.0.7
   '@nomiclabs/hardhat-ethers': ^2.0.6
   '@nomiclabs/hardhat-waffle': ^2.0.3
   '@rushstack/eslint-patch': ^1.1.0
@@ -48,6 +49,7 @@ dependencies:
 devDependencies:
   '@iconify/json': 2.1.158
   '@intlify/vite-plugin-vue-i18n': 3.4.0_vite@4.0.3+vue-i18n@9.2.2
+  '@nomicfoundation/hardhat-network-helpers': 1.0.7_hardhat@2.12.4
   '@nomiclabs/hardhat-ethers': 2.2.1_yab2ug5tvye2kp6e24l5x3z7uy
   '@nomiclabs/hardhat-waffle': 2.0.3_4hdmf4cwh26vqybvwum6xluuca
   '@rushstack/eslint-patch': 1.2.0
@@ -1103,6 +1105,15 @@ packages:
       rustbn.js: 0.2.0
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /@nomicfoundation/hardhat-network-helpers/1.0.7_hardhat@2.12.4:
+    resolution: {integrity: sha512-X+3mNvn8B7BY5hpIaLO+TrfzWq12bpux+ajGGdmdcfC78NXmYmOZkAtiz1QZx1YIZGMS1LaXzPXyBExxKFpCaw==}
+    peerDependencies:
+      hardhat: ^2.9.5
+    dependencies:
+      ethereumjs-util: 7.1.5
+      hardhat: 2.12.4_m7b2umgpdlo7valsqrwayzc5jy
     dev: true
 
   /@nomicfoundation/solidity-analyzer-darwin-arm64/0.1.0:

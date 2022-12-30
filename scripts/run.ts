@@ -14,12 +14,12 @@ const main = async () => {
   await run('compile')
 
   // We get the contract to deploy
-  const Counter = await ethers.getContractFactory('Counter')
-  const counter = await Counter.deploy()
+  const Token = await ethers.getContractFactory('Token')
+  const token = await Token.deploy()
 
-  await counter.deployed()
+  await token.deployed()
 
-  console.log('Counter deployed to:', counter.address)
+  console.log('Token deployed to:', token.address)
 }
 
 // We recommend this pattern to be able to use async/await everywhere

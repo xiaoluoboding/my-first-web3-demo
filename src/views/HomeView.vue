@@ -40,7 +40,7 @@ import { onMounted, ref } from 'vue'
 import { ethers } from 'ethers'
 
 import { useAccountStore } from '@/stores/account'
-import Counter from '../../artifacts/contracts/Counter.sol/Counter.json'
+import Counter from '@/abi/Counter.json'
 const contractAddress = '0x5FbDB2315678afecb367f032d93F642f64180aa3'
 const counterAbi = Counter.abi
 
